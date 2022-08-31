@@ -22,10 +22,10 @@ app.get("/budgets/", (req, res) => {
     })
 })
 
-// //new
-// app.get("/budgets/new", (req, res) =>{
-//     res.render("new.ejs")
-// })
+//new
+app.get("/budgets/new", (req, res) =>{
+    res.render("new.ejs")
+})
 
 //show
 app.get("/budgets/:indexOfBudgetsArray",(req, res)=> {
