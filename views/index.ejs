@@ -15,16 +15,29 @@
     <h1>Budget Index Page</h1>
     <div class="container">
         
-        <% for(let i=0; i < allBudgets.length; i++) { %>
-            
-            <% } %>
-    </ul>
+        <table>
+            <% for(let i=0; i < allBudgets.length; i++) { %>
+                <tr>
+                    <td>
+                        <%=allBudgets[i].date %>
+                    </td>
+
+                    <td>
+                        <a href="/budgets/<%=i%>">
+                            <%=allBudgets[i].name %>
+                        </a>
+                    </td>
+
+                    <td>
+                        <%=allBudgets[i].amount %>
+                    </td>
+                </tr>
+                <% } %>
+        </table>
+       
+
+            </ul>
     </div>
 </body>
 
 </html>
-<li>
-    <a href="/budgets/<%=i%>">
-        <%=allBudgets[i].name %>
-    </a>
-</li>
