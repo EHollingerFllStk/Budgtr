@@ -14,28 +14,37 @@
 <body>
     <h1>Budget Index Page</h1>
     <div class="container">
-        <div class="container">
-            <table>
-            <% for(let i=0; i < allBudgets.length; i++) { %>
-                <tr>
-                    <td>
-                        <%=allBudgets[i].date %>
-                    </td>
-    
-                    <td>
-                        <a href="/budgets/<%=i%>">
-                            <%=allBudgets[i].name %>
-                        </a>
-                    </td>
-    
-                    <td>
-                        <%=allBudgets[i].amount %>
-                    </td>
-                </tr>
-                <% } %>
+        <a href="/budgets/new/"><button>Add Item</button></a>
+       <% let bankAccount = 0
+       for (let i =0; i <allBudgets.length; i++) {
+        bankAccount += parseInt(allBudgets[i].amount)
+       } %>
+
+       
+       <h3> <%= bankAccount %> </h3>
+       <table>
+           <% for(let i=0; i < allBudgets.length; i++) { %> 
+            <tr>
+                <td>
+                    <%=allBudgets[i].date %>
+                </td>
+                
+                <td>
+                    <a href="/budgets/<%=i%>">
+                        <%=allBudgets[i].name %>
+                    </a>
+                </td>
+                
+                <td>
+                    <%=allBudgets[i].amount %>
+                </td>
+            </tr>
+            <% } %>
         </table>
-           
+        
     </div>
+    <% if (bankAccount > 1000) { %> <style>body {background-color : green;}</style> <%} 
+    else if (bankAccount < 0){ %> <style>body {background-color : red;} </style> <%} %>
 </body>
 
 </html>

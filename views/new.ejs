@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+
+    <title>Create a new budget</title>
+</head>
+
+<body>
+    <h1>Add New Budget Item</h1>
+    <div class="containter">
+        <form action="/budgets" method="POST">
+            Date: <input type="text" name="date"><br />
+            Name: <input type="text" name="name"><br />
+            From: <input type="text" name="from"><br />
+            Price: <input type="text" name="amount"><br />
+            Tags: <input type="text" name="tags"><br />
+            <input type="submit" value="Submit" />
+    </div>
+    <a href="/budgets/"><button type="button">Return to Index Page</button></a>
+    </form>
+</body>
+
+</html>
