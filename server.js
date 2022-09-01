@@ -30,9 +30,11 @@ app.get("/budgets/new", (req, res) =>{
 //show
 app.get("/budgets/:indexOfBudgetsArray",(req, res)=> {
     res.render("show.ejs", {
-        budget: budgets[req.params.indexOfBudgetsArray]
+       budget: budgets[req.params.indexOfBudgetsArray]
     })
 })
+
+
 
 // LISTEN ON PORT...
 app.listen(port, ()=>{
